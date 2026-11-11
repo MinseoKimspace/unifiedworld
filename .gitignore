@@ -1,0 +1,14 @@
+.venv/
+.uv-cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mpl-cache/
+.warp-cache/
+*.egg-info/
+data/
+runs/
+.run-tmp/
+.runtime-tmp/
+build/
+dist/

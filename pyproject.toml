@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unifiedworld"
+version = "0.2.0"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.5,<3", "lightning>=2.5,<3", "warp-lang==1.17.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.12"]
+video = ["matplotlib>=3.8,<4", "imageio[ffmpeg]>=2.34,<3"]
+
+[project.scripts]
+unifiedworld = "unifiedworld.experiment:main"
+
+[tool.setuptools.packages.find]
+include = ["unifiedworld*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

@@ -1,0 +1,20 @@
+{
+  "model": {
+    "relation_mode": "concat",
+    "width": 64,
+    "heads": 4,
+    "blocks": 2,
+    "ffn_dim": 128,
+    "radius": 0.025,
+    "max_neighbors": 64,
+    "output_scale": 0.0078125,
+    "global_grid_size": 4
+  },
+  "training": {
+    "seed": 17,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "batch_size": 4,
+    "tbptt": 32
+  }
+}
